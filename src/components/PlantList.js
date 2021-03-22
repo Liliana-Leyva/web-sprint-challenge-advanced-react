@@ -19,7 +19,7 @@ export default class PlantList extends Component {
     axios.get('http://localhost:3333/plants')
       .then(res => {
         console.log(res);
-        //setting the returned plants array to this.state.plants
+        //setting what we got from the api to this.state plants
         this.setState({
           ...this.state,
           plants: res.data
