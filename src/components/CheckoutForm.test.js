@@ -20,7 +20,7 @@ test ("CheckoutForm adds the inputs data when the form is submitted", () => {
     render(<CheckoutForm errors={[]} />);
     
     /* I don't know what I am doing wrong, when I run the test it shows an error when testing this part */
-       const inputForm = screen.getByInputText(/input/i);
+       const inputForm = screen.getByLabelText(/name/i);
        userEvent.type(inputForm, "Wombat");
     
     
