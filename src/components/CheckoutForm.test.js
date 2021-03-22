@@ -16,8 +16,16 @@ test("form header renders", () => {});
 test("form shows success message on submit with form details", () => {});
 
 
-test ("CheckoutForm adds the inputs data when the form is submitted", ()=> {
-    render(<CheckoutForm errors={[
-    ]}/>);
+test ("CheckoutForm adds the inputs data when the form is submitted", () => {
+    render(<CheckoutForm errors={[]} />);
     
+    /* I don't know what I am doing wrong, when I run the test it shows an error when testing this part */
+       const inputForm = screen.getByInputText(/input/i);
+       userEvent.type(inputForm, "Wombat");
+    
+    
+    
+    const wombat=screen.getByText("Wombat");
+    expect(wombat).toBeDefined();
+    expect(wombat).toTh
 } )
